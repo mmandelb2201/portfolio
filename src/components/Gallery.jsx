@@ -8,12 +8,14 @@ function Gallery(){
                 <div className="galleryTitle">
                     <h2 className="galleryTitle">Tennis</h2>
                 </div>
-                <div className="gallery">
-                    <img src={tennisImage} alt="Tennis Image One"/>
-                </div>
+                <div className="galleryImages">
+                    <div className="gallery">
+                        <img src={tennisImage} alt="Description One"/>
+                    </div>
 
-                <div className="gallery">
-                    <img src={tennisImage2} alt="Tennis Image Two"/>
+                    <div className="gallery">
+                        <img src={tennisImage2} alt="Description Two"/>
+                    </div>
                 </div>
     </div>
 }
