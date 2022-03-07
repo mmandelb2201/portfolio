@@ -2,7 +2,7 @@
 .header {
     overflow: hidden;
     background-color: #282828;
-    padding: 20px 10px;
+    padding: 1vh 10px;
   }
   
   /* Style the header links */
@@ -30,14 +30,17 @@
     background-color: #282828;
   }
   .header img.socialLink {
-    height: 40px;
-    width: 40px;
+    height: 4vh;
+    width: auto;
     padding-left: 6px;
     padding-right: 6px;
     vertical-align: middle;
   }
   .header a.image {
-    padding: 0px;
+    padding: 1vh;
+    margin: auto;
+    height: 100%;
+    width: auto;
   }
 
   /* Change the background color on mouse-over */
@@ -56,7 +59,53 @@
   .header-right {
     float: right;
   }
+
+  .galleryContainer {
+    height: 40vh;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.gallery {
+    margin: 5px;
+    height: 100%;
+    width: fit-content;
+    float: left;
+  }
   
+  div.gallery div{
+    width: auto;
+  }
+
+  div.gallery img {
+    width: auto;
+    height: 90%;
+    border: 1px solid black;
+  }
+
+  div.gallery img:hover{
+    animation-name: enlargeImage;
+    animation-duration: 1s;
+    height: 100%;
+  }
+
+  h2.galleryTitle {
+    font-size: 4vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  div.galleryTitle{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @keyframes enlargeImage {
+    from {height: 90%;}
+    to {height: 100%;}
+  }
+
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
   @media screen and (max-width: 500px) {
     .header a {
