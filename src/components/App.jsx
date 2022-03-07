@@ -8,14 +8,14 @@ import Resume from "./Resume"
 function App(){
     return <div>
     <Header />
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<h1>Home</h1>} />
-                <Route path="/resume" element={<Resume />} />
-                <Route path="/projects" element={<h1>projects</h1>} />
-                <Route path="/contact" element={<h1>contact</h1>} />
-            </Routes>
-        </BrowserRouter>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/projects" element={<h1>projects</h1>} />
+            <Route path="/contact" element={<h1>contact</h1>} />
+        </Routes>
+    </BrowserRouter>
     </div>
 }
 
