@@ -5,7 +5,7 @@
     height: fit-content;
     display: flex;
     align-items: center;
-    padding: 0.5vh;
+    padding: 1vh;
   }
   
   /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
@@ -81,46 +81,46 @@
 
   .galleryContainer {
     height: fit-content;
-    width: 80vh;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
   }
-
-  div.gallery {
-    margin: 5px;
-    height: 100%;
-    width: fit-content;
-    
-  }
   
   div.galleryImages {
     height: 40vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    width: fit-content;
   }
 
   div.gallery{
-    width: 30vh;
-    margin-left: auto;
-    margin-right: auto;
+    float: left;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  div.gallery img {
+  div.gallery:hover{
+    width: fit-content;
+  }
+
+  div.gallery img{
+    max-width: 100%;
+    max-height: 100%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    height: 100%;
+    transform: scaleX(0.25);
+  }
+
+  div.gallery img:hover {
     width: auto;
-    height: 90%;
+    height: 100%;
+    transform: scaleX(1)
   }
 
-  div.gallery img:hover{
-    animation-name: enlargeImage;
-    animation-duration: 1s;
+
+  div.gallvery img.active {
+    width: auto;
     height: 100%;
   }
 
@@ -135,11 +135,18 @@
     margin-right: auto;
   }
 
-  @keyframes enlargeImage {
-    from {height: 90%;}
-    to {height: 100%;}
+  div.fullGallery{
+    max-height: 50vh;
+  }
+  @keyframes makeBigger{
+    from {width: 25%;}
+    to {width: auto;}
   }
 
+  @keyframes makeSmaller{
+    from {width: auto;}
+    to {width: 25%;}
+  }
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
   @media screen and (max-width: 500px) {
     .header a {
