@@ -93,23 +93,17 @@
     width: fit-content;
   }
 
-  div.gallery{
-    float: left;
+  img.inactive{
+    max-width: 7vh;
+    transition: max-width 0.5s ease-out;
     height: 100%;
+    float:left;
+    padding: 1vh;
   }
 
-  div.gallery:hover{
-    width: fit-content;
-  }
-
-  div.gallery img{
-    max-width: 100%;
-    max-height: 100%;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
-    height: 100%;
-    transform: scaleX(0.25);
+  img.inactive:hover{
+    max-width: 500vh;
+    transition: max-width 0.5s ease-in;
   }
 
   div.gallery img:hover {
