@@ -13,7 +13,7 @@ function Gallery(){
     const imageElements = images.map((image) => (
             <img className={imageToShow === image ? "inactive" : "inactive"} src={image} onClick={() => showImage(image)}/>
     )) 
-
+      
     const showImage = (image) => {
         setImageToShow(image)
     }
