@@ -10,7 +10,7 @@ function Header(){
         </a>
         <div className="header-right">
             <a className={Cutter(window.location.href.slice(2)) === "/" ? "active" : "inactive"} href="/">Home</a>
-            <a className={Cutter(window.location.href.slice(2)) === "/resume" ? "active" : "inactive"} href="/resume">Resume</a>
+            <a className={Cutter(window.location.href.slice(2)) === "/aboutme" ? "active" : "inactive"} href="/aboutme">About Me</a>
             <a className={Cutter(window.location.href.slice(2)) === "/projects" ? "active" : "inactive"} href="/projects">Projects</a>
             <a className={Cutter(window.location.href.slice(2)) === "/gallery" ? "active" : "inactive"} href="/gallery">Gallery</a>
             <a className={Cutter(window.location.href.slice(2)) === "/contact" ? "active" : "inactive"} href="/contact">Contact Me</a>

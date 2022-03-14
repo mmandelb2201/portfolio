@@ -89,57 +89,84 @@
   }
   
   div.galleryImages {
-    height: 40vh;
+    height: 50vh;
     width: fit-content;
   }
 
   img.inactive{
-    max-width: 7vh;
-    transition: max-width 0.5s ease-out;
+    width: 7vh;
     height: 100%;
     float:left;
-    padding: 1vh;
+    padding: 0.15vh;
+    transition: width 0.3s ease-out;
+    animation-duration: 1s;
+    animation-name: makeSmaller;
   }
 
   img.inactive:hover{
-    max-width: 500vh;
-    transition: max-width 0.5s ease-in;
+    width: 9vh;
+    transition: width 0.3s ease-in;
   }
 
-  div.gallery img:hover {
-    width: auto;
+  img.active {
+    float: left;
     height: 100%;
-    transform: scaleX(1)
+    animation-duration: 1s;
+    animation-name: makeBigger;
+    width: 40vh;
   }
 
-
-  div.gallvery img.active {
-    width: auto;
-    height: 100%;
-  }
-
-  h2.galleryTitle {
+  h2.mediumTitle {
     font-size: 4vh;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
   }
 
-  div.galleryTitle{
+  div.titleContainer{
     margin-left: auto;
     margin-right: auto;
   }
 
+  .containerText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5vh;
+    vertical-align: middle;
+  }
+
+  div.containerColumn {
+    max-height: 100%;
+    width: fit-content;
+    max-width: 50%;
+    padding: auto;
+  }
+
+  div.centerContainer {
+    margin: auto;
+    max-width: 90%;
+    width: fit-content;
+    height: 50vh;
+  }
+
+  div.horizontalContent {
+    max-block-size: 100%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   div.fullGallery{
-    max-height: 50vh;
+    height: 100%;
+    width: fit-content;
   }
   @keyframes makeBigger{
-    from {width: 25%;}
-    to {width: auto;}
+    from {width: 8vh;}
+    to {width: 40vh;}
   }
 
   @keyframes makeSmaller{
-    from {width: auto;}
-    to {width: 25%;}
+    from {width: 40vh;}
+    to {width: 8vh;}
   }
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
   @media screen and (max-width: 500px) {
