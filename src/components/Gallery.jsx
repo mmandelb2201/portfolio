@@ -8,18 +8,11 @@ const images = [tennisImage, tennisImage2, jeffrey]
 
 function Gallery(){
 
-    const [imageToShow, setImageToShow] = useState('')
-
     const imageElements = images.map((image) => (
-            <img className={imageToShow === image ? "inactive" : "inactive"} src={image} onClick={() => showImage(image)}/>
+            <img src={image}/>
     )) 
-      
-    const showImage = (image) => {
-        setImageToShow(image)
-    }
 
-    return <div className="fullGallery">
-            <div className="galleryContainer">
+    return <div className="galleryContainer">
                 <div className="galleryTitle">
                     <h2 className="galleryTitle">Tennis</h2>
                 </div>
@@ -28,7 +21,6 @@ function Gallery(){
                 </div>
             </div>
             
-            </div>
 }
 
 export default Gallery
