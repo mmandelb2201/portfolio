@@ -4,6 +4,7 @@ import "../style.css"
 
 import Header from "./Header"
 import Resume from "./Resume"
+import Introduction from "./Introduction"
 import Gallery from "./Gallery"
 import AboutMe from "./AboutMe"
 
@@ -12,7 +13,7 @@ function App(){
     <Header />
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/" element={<Introduction />} />
             <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/projects" element={<h1>projects</h1>} />
             <Route path="/gallery" element={<Gallery />} />

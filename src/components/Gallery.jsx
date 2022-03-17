@@ -1,32 +1,27 @@
 import React, { useState } from "react"
 
-import tennisImage from "../images/TennisImage.JPG"
-import tennisImage2 from "../images/TennisImage2.JPG"
-import jeffrey from "../images/IMG-3669.jpg"
+function Gallery(props){
 
-const images = [tennisImage, tennisImage2, jeffrey]
+    const images = [require("../images/"+props.imgOne), require("../images/"+props.imgTwo), require("../images/"+props.imgThree)]
 
-function Gallery(){
-
-    const [bigImage, setBigImage] = useState('')
+    const [activeKey, setBigActive] = useState(images[0].toString())
 
     const imageElements = images.map((image) => (
-            <img className={bigImage === image ? "active" : "inactive"} src={image} onClick={() => showImage(image)}/>
+        <div className={activeKey === image.toString() ? "active" : "inactive"} onClick={() => setActive(image)}  key={image.toString()}>
+            <img src={image} />
+        </div>
     )) 
       
-    const showImage = (image) => {
-        setBigImage(image)
+    const setActive = (image) => {
+        setBigActive(image.toString())
     }
 
-
-
-    return <div className="fullGallery">
-            <div className="galleryContainer">
-                <div className="galleryImages">
-                    {imageElements}
+    return <div className="full-gallery">
+                <div className="gallery-container">
+                    <div className="gallery-images">
+                        {imageElements}
+                    </div>
                 </div>
-            </div>
-            
             </div>
 }
 

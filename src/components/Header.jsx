@@ -4,18 +4,20 @@ import gitHubLogo from "../images/GitHubLogo.png"
 
 function Header(){
     return <div className="header">
-        <a href="/" className="logo">Matthew Mandelbaum</a>
-        <a className="image" href="https://github.com/mmandelb2201">
-            <img  className="socialLink" src={gitHubLogo} alt="Link to GitHub repo"/>
-        </a>
-        <div className="header-right">
-            <a className={Cutter(window.location.href.slice(2)) === "/" ? "active" : "inactive"} href="/">Home</a>
-            <a className={Cutter(window.location.href.slice(2)) === "/aboutme" ? "active" : "inactive"} href="/aboutme">About Me</a>
-            <a className={Cutter(window.location.href.slice(2)) === "/projects" ? "active" : "inactive"} href="/projects">Projects</a>
-            <a className={Cutter(window.location.href.slice(2)) === "/gallery" ? "active" : "inactive"} href="/gallery">Gallery</a>
-            <a className={Cutter(window.location.href.slice(2)) === "/contact" ? "active" : "inactive"} href="/contact">Contact Me</a>
-        </div>
-  </div>
+                <div className="header-left">
+                    <a href="/" className="logo">Matthew Mandelbaum</a>
+                    <a className="image" href="https://github.com/mmandelb2201">
+                        <img  className="social-link" src={gitHubLogo} alt="Link to GitHub repo"/>
+                    </a>
+                </div>
+                <div className="header-right">
+                    <a className={Cutter(window.location.href.slice(2)) === "/" ? "active" : "inactive"} href="/">Home</a>
+                    <a className={Cutter(window.location.href.slice(2)) === "/aboutme" ? "active" : "inactive"} href="/aboutme">About Me</a>
+                    <a className={Cutter(window.location.href.slice(2)) === "/projects" ? "active" : "inactive"} href="/projects">Projects</a>
+                    <a className={Cutter(window.location.href.slice(2)) === "/gallery" ? "active" : "inactive"} href="/gallery">Gallery</a>
+                    <a className={Cutter(window.location.href.slice(2)) === "/contact" ? "active" : "inactive"} href="/contact">Contact Me</a>
+                </div>
+            </div>
 }
 
 function Cutter(url){
